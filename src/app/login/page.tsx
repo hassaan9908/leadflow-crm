@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { login } from "./actions";
-
+import { SubmitButton } from "@/components/auth/submit-button";
 type LoginPageProps = {
   searchParams: Promise<{
     error?: string;
@@ -67,12 +67,10 @@ export default async function LoginPage({
             />
           </div>
 
-          <button
-            type="submit"
-            className="w-full rounded-md bg-primary px-4 py-2 font-medium text-primary-foreground"
-          >
-            Login
-          </button>
+          <SubmitButton
+  idleText="Sign In"
+  pendingText="Signing in..."
+/>
         </form>
 
         <p className="mt-6 text-center text-sm text-muted-foreground">
